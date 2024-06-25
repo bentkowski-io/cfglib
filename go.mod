@@ -1,4 +1,4 @@
-module bentkowski.io/cfglib
+module github.com/bentkowski-io/cfglib
 
 go 1.22.3
 

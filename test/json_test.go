@@ -3,7 +3,7 @@ package cfglib_test
 import (
 	"testing"
 
-	"bentkowski.io/cfglib"
+	"github.com/bentkowski-io/cfglib"
 )
 
 func prepareJSON(t *testing.T) func() map[string]any {

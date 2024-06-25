@@ -3,7 +3,7 @@ package cfglib_test
 import (
 	"testing"
 
-	"bentkowski.io/cfglib"
+	"github.com/bentkowski-io/cfglib"
 )
 
 // Services contains the url to access the web services.

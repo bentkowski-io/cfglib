@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"bentkowski.io/cfglib"
+	"github.com/bentkowski-io/cfglib"
 )
 
 func TestCompare(t *testing.T) {
