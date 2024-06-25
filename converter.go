@@ -17,6 +17,18 @@ func NewBoolConverter(m *Config) Converter[bool] {
 		},
 	}
 }
+func NewStringConverter(m *Config, defaultValue string) Converter[string] {
+	return Converter[string]{
+		m: m,
+		converter: func(a any) string {
+			if a == nil {
+				return defaultValue
+			}
+			return fmt.Sprint(a)
+		},
+	}
+}
+
 func NewIntConverter(m *Config) Converter[int] {
 	return Converter[int]{
 		m: m,
