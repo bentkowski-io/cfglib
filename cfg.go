@@ -1,7 +1,6 @@
 package cfglib
 
 import (
-	"fmt"
 	"strings"
 
 	json "github.com/go-json-experiment/json"
@@ -32,12 +31,8 @@ func (m *Config) Read(key string) any {
 }
 
 // Read returns raw value of key. It can either be string or a map[string]any.
-func (m *Config) ReadString(key string) string {
-	if v, ok := m.generic[(ToSnakeCase(key))]; ok {
-		return fmt.Sprint(v)
-	} else {
-		return ""
-	}
+func (m *Config) ReadString(key string, defaultValue ...string) string {
+	return NewStringConverter(m, defaultValue...).Read(key)
 }
 
 func (m *Config) ReadSlice(key string, cfg interface{}) error {

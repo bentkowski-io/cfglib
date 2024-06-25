@@ -17,12 +17,16 @@ func NewBoolConverter(m *Config) Converter[bool] {
 		},
 	}
 }
-func NewStringConverter(m *Config, defaultValue string) Converter[string] {
+func NewStringConverter(m *Config, defaultValue ...string) Converter[string] {
+	dv := ""
+	if len(defaultValue) > 0 {
+		dv = defaultValue[0]
+	}
 	return Converter[string]{
 		m: m,
 		converter: func(a any) string {
 			if a == nil {
-				return defaultValue
+				return dv
 			}
 			return fmt.Sprint(a)
 		},
