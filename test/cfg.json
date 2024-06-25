@@ -1,0 +1,30 @@
+{
+    "slice": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "import": {
+        "postcode": {
+            "import_time": [
+                "03:45",
+                "02:45"
+            ]
+        }
+    },
+    "a": "a",
+    "b": "b",
+    "c": "c",
+    "d": "d=",
+    "srv": {
+        "p": {
+            "id": 15,
+            "host": "https://localhost:8080/api"
+        },
+        "j": {
+            "id": 38,
+            "host": "https://localhost:9090/api"
+        }
+    }
+}
